@@ -47,6 +47,15 @@ TodoTask-main/
 
 ---
 
+**Future Improvements**
+
+✅ Add due dates and reminders
+🌈 Light/Dark mode toggle
+📱 Make it PWA and mobile responsive
+🔄 Drag-and-drop task sorting
+
+---
+
 ## 🔧 Local Development Setup
 
 ### 1. Clone the repository
