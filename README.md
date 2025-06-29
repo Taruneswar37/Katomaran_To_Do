@@ -5,6 +5,7 @@ This project is a part of a hackathon run by https://www.katomaran.com.
 A modern and user-friendly **To-Do Task Manager** built with **React.js**, **Firebase Authentication**, **MongoDB**, and **Express.js**, featuring both **manual** and **Google Sign-In** support.
 
 **📘 Project Description**
+
 Katomaran To-Do Task Manager is a modern, full-stack web application designed to help users efficiently manage their daily tasks. Built using React.js, Firebase Authentication, Node.js, and MongoDB, it offers a clean and user-friendly interface for adding, editing, completing, and deleting tasks.
 
 The application supports both manual login/registration and Google Sign-In, making it flexible and easy to use. Tasks are stored securely in a cloud-based database and are uniquely associated with each authenticated user. The frontend is deployed on Vercel and the backend is hosted via Render, ensuring reliable performance and accessibility.
