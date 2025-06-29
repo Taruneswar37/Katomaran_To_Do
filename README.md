@@ -63,13 +63,13 @@ TodoTask-main/
 git clone https://github.com/your-username/todo-task-manager.git
 cd TodoTask-main
 
-### 2. Start the backend
+2. Start the backend
 
 cd backend
 npm install
 node server.js
 
-### 3. Start the frontend
+3. Start the frontend
 
 cd frontend
 npm install
