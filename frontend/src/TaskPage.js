@@ -36,7 +36,7 @@ function TaskPage({ user }) {
   };
 
   const toggleTask = (id, done) => {
-    axios.put(`https://todotask-im6j.onrender.com/tasks/${id}`, { done: !done })
+    axios.put(`https://todotask-im6j.onrender.com/tasks/${id}`, { done: !done, userId })
       .then(res => {
         setTasks(tasks.map(t => (t._id === id ? res.data : t)));
       });
@@ -77,70 +77,61 @@ function TaskPage({ user }) {
   );
 
   return (
-    <div className="container">
-      <div className="wrapper">
-        <div className="account-card">
-          <h2>👤 Welcome, <span>{user.displayName}</span></h2>
-          {user.email && <p className="account-email">📧 {user.email}</p>}
-        </div>
+    <div className="task-container">
+      <nav className="task-header">
+        <h2>Welcome, <span>{user.displayName}</span></h2>
+        {user.email && <p>{user.email}</p>}
+        <button className="logout-btn" onClick={handleLogout}>Logout</button>
+      </nav>
 
-        <header><h1>📝 Todo Task Manager</h1></header>
+      <main className="task-main">
+        <h1>Task Manager</h1>
 
-        <div className="task-form">
+        <div className="task-input-area">
           <input
             type="text"
-            placeholder="Add a new task..."
+            placeholder="What needs to be done?"
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
-          <button onClick={addTask}>Add</button>
+          <button onClick={addTask}>Add Task</button>
         </div>
 
-        <div className="filter-bar">
-          <button onClick={() => setFilter('all')}>All</button>
-          <button onClick={() => setFilter('done')}>Completed</button>
-          <button onClick={() => setFilter('pending')}>Pending</button>
+        <div className="task-filter">
+          <button onClick={() => setFilter('all')} className={filter === 'all' ? 'active' : ''}>All</button>
+          <button onClick={() => setFilter('done')} className={filter === 'done' ? 'active' : ''}>Completed</button>
+          <button onClick={() => setFilter('pending')} className={filter === 'pending' ? 'active' : ''}>Pending</button>
         </div>
 
-        <div className="task-list">
+        <ul className="task-list">
           {filteredTasks.map(task => (
-            <div className="task" key={task._id}>
+            <li key={task._id} className={task.done ? 'completed' : ''}>
               {editId === task._id ? (
                 <>
                   <input
                     type="text"
-                    className="edit-input"
                     value={editInput}
                     onChange={(e) => setEditInput(e.target.value)}
                   />
-                  <button className="save-btn" onClick={() => saveEdit(task._id)}>Save</button>
-                  <button className="cancel-btn" onClick={() => setEditId(null)}>Cancel</button>
+                  <button onClick={() => saveEdit(task._id)}>Save</button>
+                  <button onClick={() => setEditId(null)}>Cancel</button>
                 </>
               ) : (
                 <>
-                  <div
-                    className="task-title"
-                    style={{ textDecoration: task.done ? 'line-through' : 'none' }}
-                  >
-                    {task.title}
-                  </div>
+                  <span>{task.title}</span>
                   <div className="task-actions">
-                    <button className="edit-btn" onClick={() => toggleTask(task._id, task.done)}>
+                    <button onClick={() => toggleTask(task._id, task.done)}>
                       {task.done ? 'Undo' : 'Done'}
                     </button>
-                    <button className="edit-btn" onClick={() => startEdit(task)}>Edit</button>
-                    <button className="delete-btn" onClick={() => deleteTask(task._id)}>Delete</button>
+                    <button onClick={() => startEdit(task)}>Edit</button>
+                    <button onClick={() => deleteTask(task._id)}>Delete</button>
                   </div>
                 </>
               )}
-            </div>
+            </li>
           ))}
-        </div>
-
-        <div className="logout-wrapper">
-          <button onClick={handleLogout} className="logout-btn">Logout</button>
-        </div>
-      </div>
+        </ul>
+      </main>
     </div>
   );
 }

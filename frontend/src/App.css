@@ -423,3 +423,294 @@ h1 {
 .edit-input[type="email"]::placeholder {
   content: "📧 Enter Email";
 }
+
+/* Login Page New Styles */
+.login-container {
+  display: flex;
+  width: 900px;
+  margin: 60px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-section {
+  width: 50%;
+  background: #ffffff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-section h2 {
+  margin-bottom: 20px;
+  color: #7c3aed;
+}
+
+.form-section input {
+  margin: 10px 0;
+  padding: 12px 18px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.form-section button {
+  background: linear-gradient(45deg, #9333ea, #a855f7);
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.form-section button:hover {
+  opacity: 0.9;
+}
+
+.form-section hr {
+  margin: 30px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.terms {
+  font-size: 13px;
+  margin-top: 10px;
+  color:#0f0f0f
+}
+
+.info-section {
+  width: 50%;
+  background: linear-gradient(135deg, #9333ea, #a855f7);
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.info-section h1 {
+  margin-bottom: 20px;
+}
+
+.learn-more {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f2f2f2;
+}
+
+.register-card {
+  background: white;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  text-align: center;
+}
+
+.register-header {
+  background: linear-gradient(90deg, #9333ea, #9333ea);
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+  color: white;
+  margin: -25px -25px 20px -25px;
+}
+
+.register-card input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.register-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: #9333ea;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.register-card button:hover {
+  background-color: #0097a7;
+}
+
+.login-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+/* Reset and base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Container */
+.task-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.task-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #2d6cdf;
+}
+
+.task-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.logout-btn {
+  background-color: #ff5252;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #e04848;
+}
+
+/* Main content */
+.task-main {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.task-main h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-align: center;
+  color: #333;
+}
+
+/* Input area */
+.task-input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-input-area input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.task-input-area button {
+  background-color: #2d6cdf;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.task-input-area button:hover {
+  background-color: #2458c3;
+}
+
+/* Filters */
+.task-filter {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.task-filter button {
+  margin: 0 8px;
+  padding: 8px 14px;
+  background-color: #eee;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.task-filter .active {
+  background-color: #2d6cdf;
+  color: white;
+}
+
+/* Task list */
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li {
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 14px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-list li.completed span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.task-actions button {
+  margin-left: 10px;
+  background-color: #f1f1f1;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-actions button:hover {
+  background-color: #ddd;
+}
