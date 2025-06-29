@@ -1,5 +1,7 @@
 # ✅ Katomaran To-Do Task Manager
 
+This project is a part of a hackathon run by https://www.katomaran.com.
+
 A modern and user-friendly **To-Do Task Manager** built with **React.js**, **Firebase Authentication**, **MongoDB**, and **Express.js**, featuring both **manual** and **Google Sign-In** support.
 
 ## 🚀 Features
