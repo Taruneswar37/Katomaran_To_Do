@@ -63,13 +63,6 @@ TodoTask-main/
 git clone https://github.com/your-username/todo-task-manager.git
 cd TodoTask-main
 
-**Future Improvements**
-
-✅ Add due dates and reminders
-🌈 Light/Dark mode toggle
-📱 Make it PWA and mobile responsive
-🔄 Drag-and-drop task sorting
-
 ### 2. Start the backend
 
 cd backend
