@@ -57,6 +57,8 @@ TodoTask-main/
 
 ## Demo Link: https://screenapp.io/app/#/shared/W6_o-QPrps
 
+---
+
 **Future Improvements**
 
 ✅ Add due dates and reminders
